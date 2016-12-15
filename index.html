@@ -6,7 +6,7 @@
 
   <head>
 
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <title>Rita Fonseca</title>
     <meta charset="utf-8" />
@@ -19,39 +19,71 @@
 
   <body>
 
-    <a href="home.html"><img id="home" src="home.png"/></a>
+    <nav>
 
-    <ul id="menu">
-      <li><a href="work.html">WORK</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="contacts.html">CONTACTS</a></li>
-    </ul>
+      <a href="index.html" id="logo" title="logo"></a>
 
-    <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn"><img id="tracinhos" src="tracinhos.png"/></button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="work.html">WORK</a>
-    <a href="about.html">ABOUT</a>
-    <a href="contacts.html">CONTACTS</a>
-  </div>
-</div>
+      <a id="about" href="about.html">ABOUT</a>
 
-    <h1>Project Title</h1>
+    </nav>
 
-    <img id="main_image" src="main_image.jpg"/>
+      <ul id="work">
+        <li onclick="projeto()"><img src="imagens/imagem1.png"/>
+            <p class="title">Video Game Character</p>
+            <p class="tag">3D</p></li>
 
-    <div class="description">
+            <div id="projeto1">
+              <a onclick="fechar()"  id="fechar" title="fechar" > </a>
 
-      <p>Etiam posuere quam ac quam. Maecenas aliquet accumsan leo. Nullam dapibus fermentum ipsum. Etiam quis quam. Integer lacinia. Nulla est. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Integer vulputate sem a nibh rutrum consequat. Maecenas lorem. Pellentesque pretium lectus id turpis. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Fusce wisi.</p>
+              <img src="imagens/3.jpg"/>
 
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi gravida libero nec velit. Morbi scelerisque luctus velit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Proin mattis lacinia justo. Vestibulum facilisis auctor urna. Aliquam in lorem sit amet leo accumsan lacinia. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Phasellus et lorem id felis nonummy placerat. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Aenean vel massa quis mauris vehicula lacinia.</p>
-    </div>
+              <p> This project was developed as an assigment for a 3D class on my third year at FBAUP. I was asked to create a 3D character inspired by me and animate a walkcycle and an idle.</p>
 
-      <img class="other_images" src="1.jpg"/>
-      <img class="other_images" src="2.jpg"/>
-      <img class="other_images" src="3.jpg"/>
-      <iframe src="https://player.vimeo.com/video/164984210"></iframe>
 
-    <script src="scripts.js"></script>
+            </div>
+
+        <li><img src="imagens/imagem3.png"/>
+            <p class="title">Media Comsumption</p>
+            <p class="tag">Infography</p></li>
+        <li><img src="imagens/imagem2.png"/>
+            <p class="title">Ilha das Mulheres</p>
+            <p class="tag">Illustration</p></li>
+        <li><img src="imagens/imagem4.png"/>
+            <p class="title">Vaccination saves lives</p>
+            <p class="tag">Infography, Installation</p></li>
+        <li><img src="imagens/imagem5.png"/>
+            <p class="title">CxOyHz</p>
+            <p class="tag">3D, Installation</p></li>
+        <li><img src="imagens/imagem6.png"/>
+            <p class="title">Hyper Drone Racing</p>
+            <p class="tag">3D, Video Games</p></li>
+        <li><img src="imagens/imagem7.png"/>
+            <p class="title">The Bechdel Test Pyramid</p>
+            <p class="tag">Infography</p></li>
+        <li><img src="imagens/imagem8.png"/>
+            <p class="title">Ok Go</p>
+            <p class="tag">Illustration</p></li>
+        <li><img  src="imagens/imagem9.png"/>
+            <p class="title">Video Game Character</p>
+            <p class="tag">Programming, Installation</p></li>
+      </ul>
+
+
+
+      <footer>
+
+      <p class="fim">Rita Fonseca - Portfolio Online</p>
+
+      </footer>
+
+      <script>
+        function projeto() {
+          document.getElementById("projeto1").style.display = "flex";
+        }
+
+        function fechar() {
+          document.getElementById("projeto1").style.display = "none";
+        }
+</script>
+
   </body>
-</html>

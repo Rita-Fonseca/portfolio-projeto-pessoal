@@ -2,75 +2,175 @@
 @import "reset";
 
 body{
-    font-family: 'Raleway', sans-serif;
-    margin: 0 auto;
-    width: 70%;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  width: 70%;
+  line-height: 110%;
 }
 
-//menu
-#home{
-  width: 10%;
-  position: absolute;
-  top:50px;
-  left:5%;
+p{
+  padding-bottom: 10px;
+}
+
+//nav
+nav{
+  height: 100px;
+}
+
+#logo {
+ position: fixed;
+ top: 20px;
+ left: 30px;
+ width: 50px;
+ height: 50px;
+ background-image: url('imagens/logo_1.svg');
+}
+
+#logo:hover {
+   background-image: url('imagens/logo_2.svg');
 }
 
 a{
-  color: #000;
+  color: $green;
   text-decoration: none;
 }
 a:hover{
-  color: $color-hover;
+  color: darken($green, 30%);
 }
 
-.dropdown{
-  display: none;
-}
-ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-li{
-  padding: 50px 0px 10px 15px;
+#about{
+  position: fixed;
+  top: 35px;
+  right: 30px;
+  color: #000;
   font-size: $menu_size_pc;
   font-weight: 600;
 }
 
+#about:hover{
+  color: #000;
+  border-bottom: solid 4px $green;
+}
+
+.transparente{
+  color: $shadow;
+}
+
+
+//fim
+
+.fim{
+  font-size: 9pt;
+  color: $gray;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0px;
+  width: 70%;
+  text-align: center;
+  padding: 15px;
+
+}
 //content
 
+//work
+#work{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+li img{
+  border-radius:2%;
+  overflow:hidden;
+  transition: width 0.05s ease-in;
+  width: 250px;
+  margin: 15px;
+  box-shadow: 10px 10px $shadow;
+}
+
+li img:hover{
+  width: 270px;
+  margin: 15px;
+  box-shadow: 10px 10px $green;
+}
+
+.title{
+  margin-left: 15px;
+}
+
+.tag{
+  margin-left: 18px;
+}
+
+.tag{
+  margin-left: 25px;
+  color: $gray;
+  font-size: 8pt;
+}
+
+#projeto1{
+  display:none;
+  position: fixed;
+  background-color: $gray;
+  justify-content: center;
+  top: 150px;
+  left: 15%;
+  width: 70%;
+  height: 500px;
+  border-radius:2%;
+}
+
+#fechar {
+ display: flex;
+ width: 30px;
+ height: 30px;
+ background-image: url('imagens/fechar.svg');
+ background-repeat: no-repeat;
+}
+
+#projeto1 img{
+  display: flex;
+  width: 60%;
+  height: 60%;
+
+}
+
+#fechar:hover {
+   background-image: url('imagens/fecharhover.svg');
+}
+
+
+//about
+#about_text{
+  padding: 0px 130px 0px 130px;
+}
+
+.contacts{
+  height: 30px;
+}
+
+#social, li{
+  display: inline;
+  justify-content: center;
+  padding-left: 10px;
+}
+
 h1{
+  border-style: dashed;
   color: $color-menu;
   text-align: center;
   font-weight: 700;
   font-size: $title_size_pc;
+  padding: 50px 0% 5% 0%;
+}
+
+h2{
+  color: $green;
+  text-align: center;
+  font-weight: 700;
+  font-size: $title_size_pc;
   padding: 10% 0% 5% 0%;
-}
-
-#main_image{
-  width:100%;
-}
-
-.description{
-  margin: 50px 0px 80px 0px;
-  font-weight: 300;
-  font-size: $text_size_pc;
-  line-height: 1.5;
-  text-indent: 1em;
-}
-
-iframe{
-  width:$image_size_pc;
-  display: block;
-  margin: 0 auto;
-}
-
-.other_images{
-  width: $image_size_pc;
-  padding-bottom: 10%;
-  display: block;
-  margin: 0 auto;
 }
 
 
@@ -92,62 +192,11 @@ li{
 }
 @media screen and (max-width: 765px) {
 
-//menus
-  /* Dropdown Button */
-  .dropbtn {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-  }
-
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-  }
-
-  #tracinhos{
-
-    margin-top: 15px;
-    width: 30px;
-  }
-
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-      display: none;
-      position:fixed;
-      top: 50px;
-      right: 15%;
-      background-color: #fff;
-      min-width: 160px;
-  }
-
-  /* Links inside the dropdown */
-  .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: flex;
-      justify-content: flex-end;
-  }
-
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
-
-  .show {display:block;}
-
-  #menu{
-    display: none;
-  }
-
 
   h1{
     font-size: $title_size_tlm;
   }
 
   .other_images{
-    width: $image_size_tlm;
+    width: $image_size_tlm;}
   }
-
-}
