@@ -31,11 +31,11 @@ nav{
 }
 
 a{
-  color: $green;
+  color: darken($green, 40%);
   text-decoration: none;
 }
 a:hover{
-  color: darken($green, 30%);
+  color: $green;
 }
 
 #about{
@@ -80,7 +80,7 @@ a:hover{
   margin-bottom: 50px;
 }
 
-li img{
+.work img{
   border-radius:2%;
   overflow:hidden;
   transition: width 0.05s ease-in;
@@ -89,7 +89,7 @@ li img{
   box-shadow: 10px 10px $shadow;
 }
 
-li img:hover{
+.work img:hover{
   width: 270px;
   margin: 15px;
   box-shadow: 10px 10px $green;
@@ -111,13 +111,14 @@ li img:hover{
 
 #projeto1{
   display:none;
-  position: fixed;
-  background-color: $gray;
+  position: absolute;
   justify-content: center;
+  background-color: $gray;
+  display: flex;
+  flex-wrap: wrap;
   top: 150px;
   left: 15%;
   width: 70%;
-  height: 500px;
   border-radius:2%;
 }
 
@@ -129,32 +130,38 @@ li img:hover{
  background-repeat: no-repeat;
 }
 
-#projeto1 img{
+#projeto1 img, iframe{
+  padding: 15px;
   display: flex;
   width: 60%;
   height: 60%;
-
 }
 
 #fechar:hover {
    background-image: url('imagens/fecharhover.svg');
 }
 
-
 //about
 #about_text{
   padding: 0px 130px 0px 130px;
 }
 
-.contacts{
+.contacts li{
+
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+flex-direction: row;
+}
+
+.contacts img{
   height: 30px;
 }
 
-#social, li{
-  display: inline;
-  justify-content: center;
-  padding-left: 10px;
+.contacts img:hover{
+  box-shadow: none;
 }
+
 
 h1{
   border-style: dashed;
