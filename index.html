@@ -28,25 +28,9 @@
     </nav>
 
       <ul id="work">
-        <li onclick="projeto()" class="work"><img src="imagens/imagem1.png"/>
+        <li id="mostrar" class="work"><img src="imagens/imagem1.png"/>
             <p class="title">Video Game Character</p>
             <p class="tag">3D</p></li>
-
-            <div id="projeto1">
-              <a onclick="fechar()"  id="fechar" title="fechar" > </a>
-
-              <h2>Video Game Character</h2>
-
-              <img src="imagens/3.jpg"/>
-
-              <p> This project was developed as an assigment for a 3D class on my third year at FBAUP. I was asked to create a 3D character inspired by me and animate a walkcycle and an idle.</p>
-
-              <iframe src="https://player.vimeo.com/video/164984210" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-              <iframe src="https://player.vimeo.com/video/164983973" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-            </div>
-
         <li class="work"><img src="imagens/imagem3.png"/>
             <p class="title">Media Comsumption</p>
             <p class="tag">Infography</p></li>
@@ -74,21 +58,29 @@
       </ul>
 
 
-
       <footer>
 
-      <p class="fim">Rita Fonseca - Portfolio Online</p>
+      <p>Rita Fonseca - Portfolio Online</p>
 
       </footer>
 
-      <script>
-        function projeto() {
-          document.getElementById("projeto1").style.display = "flex";
-        }
+      <div id="sombra">
+      <div>
 
-        function fechar() {
-          document.getElementById("projeto1").style.display = "none";
-        }
-</script>
+        <div id="projeto1">
+          <a id="fechar" title="fechar" > </a>
 
+          <h2>Video Game Character</h2>
+
+          <img src="imagens/3.jpg"/>
+
+          <p id="descricao"> This project was developed as an assigment for a 3D class on my third year at FBAUP. I was asked to create a 3D character inspired by me and animate a walkcycle and an idle.</p>
+
+          <iframe src="https://player.vimeo.com/video/164984210" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+          <iframe src="https://player.vimeo.com/video/164983973" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+
+      <script src="jquery-3.1.1.min.js"></script>
+      <script src="scripts.js"></script>
   </body>
